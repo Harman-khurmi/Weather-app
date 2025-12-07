@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="/script.js" defer></script>
+</head>
+<body>
+    <div class="bg-gray-800 h-screen flex items-center justify-center">
+        <div id="card" class="bg-white h-[70%] w-[30%] rounded-3xl p-8 bg-linear-to-br from-green-300 to-indigo-400 shadow-lg flex flex-col items-center justify-around">
+            <div class="flex items-center justify-around gap-4 w-full ">
+                <input type="text" id="input" placeholder="Enter city name" class="border-3 border-white rounded-full px-4 py-2 w-[70%] focus:outline-white"/>
+                <button class="bg-white p-3 rounded-full cursor-pointer" id="btn"><img  width="20px" src="/images/magnifying-glass.png" alt="search"></button>
+            </div>
+            <div id="failInfo" class="hidden text-xl text-white font-semibold pt-4"></div>
+            <div class="flex flex-col items-center justify-center gap-2 dataContent">
+                <img src="/images/cloudy.png" width="100px" alt="weather image" id="weather-image">
+                <h1 class="text-white text-8xl font-bold" id="temp"></h1>
+                <h3 class="text-white text-3xl font-semibold" id="city"></h3>
+            </div>
+            <div class="flex justify-between w-full dataContent">
+                <div class="flex items-center juistify-center gap-2">
+                    <img src="/images/humidity.png" width="40px" alt="humidity">
+                    <div class="flex flex-col">
+                        <h4 class="text-white text-xl font-semibold" id="humidity"></h4>
+                        <p class="text-white text-sm">Humidity</p>
+                    </div>
+                </div>
+                <div class="flex items-center juistify-center gap-2">
+                    <img src="/images/wind.png" width="40px" alt="wind">
+                    <div class="flex flex-col">
+                        <h4 class="text-white text-xl font-semibold" id="wind"></h4>
+                        <p class="text-white text-sm">Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
