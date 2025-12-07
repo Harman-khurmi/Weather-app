@@ -43,7 +43,7 @@ function showInfo() {
 async function checkWeather(city) {
     const response = await fetch(`${url}?q=${city}&appid=${apikey}&units=metric`);
     let data = await response.json();
-    console.log(data);
+    // console.log(data);
     if (data.cod === "404") {
         emptyInfo();
         infoDiv.classList.remove("hidden");
